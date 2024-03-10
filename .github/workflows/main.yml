@@ -22,7 +22,7 @@ jobs:
 
     - name: Run tests
       run: |
-        python -m pytest
+        python -m test_app
 
     - name: Build Docker image
       if: ${{ success() }}
