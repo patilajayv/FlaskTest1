@@ -11,9 +11,9 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 sh 'ls'
-                sh 'python3 -m venv venv'
-                sh 'chmod +x venv/bin/activate'
-                sh './venv/bin/activate && pip3 install -r requirements.txt'
+                sh 'python -m venv .venv'
+                sh 'source .venv/bin/activate'
+                sh 'pip3 install -r requirements.txt'
             }
         }
 
