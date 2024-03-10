@@ -8,14 +8,7 @@ pipeline {
             }
         }
 
-        stage('Set up Python') {
-            steps {
-                script {
-                    def pythonHome = tool 'Python 3.11.4'
-                    env.PATH = "${pythonHome}/bin:${env.PATH}"
-                }
-            }
-        }
+        
 
         stage('Install dependencies') {
             steps {
