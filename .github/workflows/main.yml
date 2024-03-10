@@ -27,4 +27,4 @@ jobs:
     - name: Build Docker image
       if: ${{ success() }}
       run: |
-        docker build -t your-image-name .
+        docker build -t hurray .
