@@ -12,7 +12,7 @@ RUN python test_app.py
 # Runtime stage
 FROM python:3.9-alpine
 WORKDIR /app
-COPY --from=builder /app /app
+COPY --from=build /app /app
 COPY . .
 EXPOSE 5000
 CMD ["python", "app.py"]
