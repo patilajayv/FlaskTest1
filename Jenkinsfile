@@ -8,13 +8,6 @@ pipeline {
             }
         }
 
-        stage('Install dependencies') {
-            steps {
-                sh 'ls'
-                sh 'python3 -m venv .venv'
-                sh 'pip install -r requirements.txt'
-            }
-        }
 
         stage('Run tests') {
             steps {
